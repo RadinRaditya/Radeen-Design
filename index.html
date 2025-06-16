@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radin Raditya - Graphic Designer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .next-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: white;
+      color: #d49b20;
+      border: 2px solid #d49b20;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #d49b20;
+      color: white;
+    }
+
+    .logo-img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .contact-item p {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      max-width: 250px;
+      border-radius: 12px;
+      object-fit: cover;
+      background-color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 60px;
+      right: 20px;
+      display: none;
+      background-color: #d49b20;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 15px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .wa-float img {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <button id="backToTop" title="Kembali ke atas">↑</button>
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="Image/div 3 R berwarna.png" alt="Logo Radin" class="logo-img">
+      </div>
+      <div class="tagline">
+        <span>Graphic Designer</span><br>
+        <span>& Illustrator</span>
+      </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="#about">Home</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about" data-aos="fade-up">
+    <img src="Image/1.png" alt="Foto Radin Raditya">
+    <div class="intro">
+      <h1></h1>
+      <p><span class="big-word">Hallo</span> saya Radin Raditya, seorang desainer grafis dan ilustrator yang berfokus pada menciptakan pengalaman visual yang tak terlupakan. Dengan keterampilan mendalam dalam desain digital, ilustrasi, dan branding, saya berkomitmen untuk menghasilkan karya yang penuh warna, imajinasi, dan kejelasan. Saya siap membantu Anda mewujudkan visi kreatif Anda melalui desain yang inovatif dan bermakna.</p>
+      <br>
+    </div>
+  </section>
+
+  <section id="work" class="projects" data-aos="fade-up">
+    <h2>Project</h2>
+    <div class="project-list">
+      <div class="project">
+        <img src="Image/Logo Depan.png" alt="Logo">
+        <p>Logo</p>
+        <a href="logo.html" class="next-button">Next</a>
+      </div>
+      <div class="project">
+        <img src="Image/Ilus depan.png" alt="Illustration">
+        <p>Illustration</p>
+        <a href="illustration.html" class="next-button">Next</a>
+      </div>
+      <div class="project">
+        <img src="Image/Bitmap depan.png" alt="Bitmap">
+        <p>Bitmap</p>
+        <a href="bitmap.html" class="next-button">Next</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" data-aos="fade-up">
+    <p>Jika Anda memiliki ide kreatif yang ingin diwujudkan, mari berbicara! Kirim pesan Anda melalui form kontak atau email di bawah ini.</p>
+
+    <div class="contact-section">
+      <div class="contact-item">
+        <a href="mailto:raditraditya2019@gmail.com">
+          <img src="Image/Gmail_icon_(2020).svg.png" alt="Gmail">
+        </a>
+        <p>raditraditya2019@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <a href="https://www.linkedin.com/in/radeentya">
+          <img src="Image/linkedin-svgrepo-com.svg" alt="LinkedIn">
+        </a>
+        <p>linkedin.com/in/radeentya</p>
+      </div>
+      <div class="contact-item">
+        <a href="https://www.behance.net/radityaradin">
+          <img src="Image/behance-1.svg" alt="Behance">
+        </a>
+        <p>behance.net/radityaradin</p>
+      </div>
+    </div>
+  </footer>
+
+  <div style="background-color: #fff0da; text-align: center; padding: 15px; font-size: 14px; color: #777;">
+    © 2025 Radin Raditya. All works are protected under copyright law.
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('transparent');
+      } else {
+        header.classList.remove('transparent');
+      }
+
+      const backToTopButton = document.getElementById('backToTop');
+      if (document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
