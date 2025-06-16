@@ -191,14 +191,13 @@
           <img src="/linkedin-svgrepo-com.svg" alt="LinkedIn">
         </a>
         <p>linkedin.com/in/radeentya</p>
-      </div>
-      <div class="contact-item">
-        <a href="https://www.behance.net/radityaradin">
-          <img src="/behance-1.svg" alt="Behance">
-        </a>
-        <p>behance.net/radityaradin</p>
-      </div>
-    </div>
+        <div class="contact-item">
+  <a href="https://www.behance.net/radityaradin" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+    <img src="/behance-1.svg" alt="Behance">
+    <p>behance.net/radityaradin</p>
+  </a>
+</div>
+
   </footer>
 
   <div style="background-color: #fff0da; text-align: center; padding: 15px; font-size: 14px; color: #777;">
@@ -221,7 +220,6 @@
       } else {
         header.classList.remove('transparent');
       }
-
       const backToTopButton = document.getElementById('backToTop');
       if (document.documentElement.scrollTop > 200) {
         backToTopButton.style.display = "block";
@@ -229,7 +227,6 @@
         backToTopButton.style.display = "none";
       }
     });
-
     document.getElementById('backToTop').addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
