@@ -423,6 +423,25 @@ body {
   text-align: center;
   color: white;
 }
+.caption {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  min-height: 40px; /* biar seragam walau caption beda panjang */
+}
+.image-wrapper {
+  background-color: white;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 300px; /* pastikan semua gambar tinggi sama */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
 
   
