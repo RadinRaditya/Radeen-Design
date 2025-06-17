@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logo - Radin Raditya</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Bitmap - Radin Raditya</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff8f0;
     }
+
     .full-orange-box {
       background-color: #d49b20;
       padding: 40px 20px;
@@ -20,30 +20,43 @@
       margin: 20px;
       box-sizing: border-box;
     }
+
     .gallery-title {
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 30px;
     }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery-item {
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .gallery img {
       width: 250px;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
     .gallery p {
       margin-top: 8px;
       font-weight: bold;
     }
+
     .back-button {
       display: inline-block;
       margin: 20px;
@@ -56,6 +69,7 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .back-button:hover {
       background-color: #d49b20;
       color: white;
@@ -68,23 +82,23 @@
     <div class="gallery-title">Bitmap Works</div>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="/bitmap label.png" alt="Logo 1" />
+        <img src="/bitmap label.png" alt="Bitmap 1" />
         <p>Desain label selai strawberry</p>
       </div>
       <div class="gallery-item">
-        <img src="/tlp.png"Logo 2 />
+        <img src="/tlp.png" alt="Bitmap 2" />
         <p>Desain cover buku</p>
       </div>
       <div class="gallery-item">
-        <img src="/Bitmap coklat.png" alt="Logo 3" />
+        <img src="/Bitmap coklat.png" alt="Bitmap 3" />
         <p>Desain kemasan coklat</p>
       </div>
       <div class="gallery-item">
-        <img src="/Bitmap mie.png" alt="Logo 4" />
+        <img src="/Bitmap mie.png" alt="Bitmap 4" />
         <p>Desain kemasan mie</p>
       </div>
       <div class="gallery-item">
-        <img src="/Bitmap pixel art.png" alt="Logo 5" />
+        <img src="/Bitmap pixel art.png" alt="Bitmap 5" />
         <p>Gambar wajah dengan art pixel</p>
       </div>
     </div>
