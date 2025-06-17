@@ -515,19 +515,5 @@ body {
   word-break: break-word;
 }
 
-/* RESPONSIF untuk layar kecil */
-@media screen and (max-width: 600px) {
-  .contact-item p {
-    font-size: 14px;
-  }
-
-  .contact-item {
-    max-width: 100px;
-  }
-
-  .contact-section {
-    gap: 20px;
-  }
-}
 
   
