@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Radin Raditya - Graphic Designer</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Progress Bar */
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 5px;
+      background: #d49b20;
+      width: 0%;
+      z-index: 9999;
     }
 
     .next-btn {
@@ -77,6 +93,15 @@
       cursor: pointer;
     }
 
+    nav a {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d49b20;
+      transform: scale(1.1);
+    }
+
     @media (max-width: 768px) {
       .contact-section {
         flex-direction: column;
@@ -99,6 +124,11 @@
       background-color: white;
       padding: 10px;
       box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+
+    .project img:hover {
+      transform: scale(1.05);
     }
 
     .project {
@@ -111,6 +141,12 @@
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
     .project-list {
@@ -135,36 +171,24 @@
       cursor: pointer;
       z-index: 999;
     }
-
-    .wa-float {
-      position: fixed;
-      bottom: 15px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .wa-float img {
-      width: 50px;
-      height: 50px;
-    }
   </style>
 </head>
 <body>
+  <div id="scrollProgress"></div>
   <button id="backToTop" title="Kembali ke atas">↑</button>
+
   <header>
     <div class="header-left">
       <div class="logo">
-        <img src="/div 3 R berwarna.png" alt="Logo Radin" class="logo-img">
+        <img src="/div 3 R berwarna.png" alt="Logo Radin" class="logo-img" />
       </div>
       <div class="tagline">
-        <strong>Graphic Designer</strong><br>
+        <strong>Graphic Designer</strong><br />
         <strong>& Illustrator</strong>
       </div>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
     <nav id="nav-menu">
       <a href="#about">Home</a>
@@ -173,30 +197,33 @@
     </nav>
   </header>
 
-  <section class="hero" id="about" data-aos="fade-up">
-    <img src="/1.png" alt="Foto Radin Raditya">
+  <section class="hero" id="about" data-aos="fade-right" data-aos-duration="1000">
+    <img src="/1.png" alt="Foto Radin Raditya" />
     <div class="intro">
-      <h1></h1>
-      <p><span class="big-word">Hallo</span> saya Radin Raditya, seorang <strong>desainer grafis</strong> dan <strong>ilustrator</strong> yang berfokus pada menciptakan pengalaman visual yang tak terlupakan. Dengan keterampilan mendalam dalam desain digital, ilustrasi, dan branding, saya berkomitmen untuk menghasilkan karya yang penuh warna, imajinasi, dan kejelasan. Saya siap membantu Anda mewujudkan visi kreatif Anda melalui desain yang inovatif dan bermakna.</p>
-      <br>
+      <h1><span id="typingText"></span></h1>
+      <p>
+        <span class="big-word">Hallo</span> saya Radin Raditya, seorang <strong>desainer grafis</strong> dan
+        <strong>ilustrator</strong> yang berfokus pada menciptakan pengalaman visual yang tak terlupakan. Dengan keterampilan mendalam dalam desain digital, ilustrasi, dan branding, saya berkomitmen untuk menghasilkan karya yang penuh warna, imajinasi, dan kejelasan. Saya siap membantu Anda mewujudkan visi kreatif Anda melalui desain yang inovatif dan bermakna.
+      </p>
+      <br />
     </div>
   </section>
 
-  <section id="work" class="Project" data-aos="fade-up">
+  <section id="work" class="Project" data-aos="zoom-in" data-aos-duration="1000">
     <h2>Project</h2>
     <div class="project-list">
-      <div class="project">
-        <img src="/Logo Depan.png" alt="Logo">
+      <div class="project" data-aos="flip-left" data-aos-delay="100">
+        <img src="/Logo Depan.png" alt="Logo" />
         <p>Logo</p>
         <a href="logo.html" class="next-button">Next</a>
       </div>
-      <div class="project">
-        <img src="/Ilus depan.png" alt="Illustration">
+      <div class="project" data-aos="flip-left" data-aos-delay="200">
+        <img src="/Ilus depan.png" alt="Illustration" />
         <p>Illustration</p>
         <a href="/illustration.html" class="next-button">Next</a>
       </div>
-      <div class="project">
-        <img src="/Bitmap depan.png" alt="Bitmap">
+      <div class="project" data-aos="flip-left" data-aos-delay="300">
+        <img src="/Bitmap depan.png" alt="Bitmap" />
         <p>Bitmap</p>
         <a href="/Bitmap.html" class="next-button">Next</a>
       </div>
@@ -205,25 +232,22 @@
 
   <footer id="contact" data-aos="fade-up">
     <p><strong>Jika Anda memiliki ide kreatif yang ingin diwujudkan, mari berbicara! Kirim pesan Anda melalui form kontak atau email di bawah ini.</strong></p>
-
     <div class="contact-section">
       <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
         <a href="mailto:raditraditya2019@gmail.com" target="_blank">
-          <img src="/Gmail_icon_(2020).svg.png" alt="Gmail">
+          <img src="/Gmail_icon_(2020).svg.png" alt="Gmail" />
         </a>
         <p>raditraditya2019@gmail.com</p>
       </div>
-
       <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
         <a href="https://www.linkedin.com/in/radeentya" target="_blank">
-          <img src="/linkedin-svgrepo-com.svg" alt="LinkedIn">
+          <img src="/linkedin-svgrepo-com.svg" alt="LinkedIn" />
         </a>
         <p>linkedin.com/in/radeentya</p>
       </div>
-
       <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
         <a href="https://www.behance.net/radityaradin" target="_blank">
-          <img src="/behance-1.svg" alt="Behance">
+          <img src="/behance-1.svg" alt="Behance" />
         </a>
         <p>behance.net/radityaradin</p>
       </div>
@@ -243,6 +267,7 @@
       nav.classList.toggle('active');
     }
 
+    // Scroll Back to Top
     window.addEventListener('scroll', function () {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
@@ -257,11 +282,30 @@
       } else {
         backToTopButton.style.display = "none";
       }
+
+      // Progress bar
+      const scrollProgress = document.getElementById("scrollProgress");
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
     });
 
     document.getElementById('backToTop').addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Typing Animation
+    const text = "Hallo!";
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        document.getElementById("typingText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    window.onload = type;
   </script>
 </body>
 </html>
