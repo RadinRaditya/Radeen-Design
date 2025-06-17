@@ -513,5 +513,12 @@ body {
   cursor: pointer;
   z-index: 999;
 }
+.project img {
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
 
   
