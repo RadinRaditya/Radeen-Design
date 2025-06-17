@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logo - Radin Raditya</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Illustration - Radin Raditya</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff8f0;
     }
+
     .full-orange-box {
       background-color: #d49b20;
       padding: 40px 20px;
@@ -20,30 +21,49 @@
       margin: 20px;
       box-sizing: border-box;
     }
+
     .gallery-title {
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 30px;
     }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery-item {
+      position: relative;
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .gallery-item:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
     .gallery img {
       width: 250px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      display: block;
     }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
     .gallery p {
       margin-top: 8px;
       font-weight: bold;
     }
+
     .back-button {
       display: inline-block;
       margin: 20px;
@@ -56,9 +76,33 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .back-button:hover {
       background-color: #d49b20;
       color: white;
+    }
+
+    /* Overlay effect */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: 16px;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
     }
   </style>
 </head>
@@ -67,40 +111,52 @@
   <div class="full-orange-box">
     <div class="gallery-title">Illustration Works</div>
     <div class="gallery">
-      <div class="gallery-item">
-        <img src="/Ilus buku.png" alt="Logo 1" />
+      <div class="gallery-item" data-aos="fade-up">
+        <img src="/Ilus buku.png" alt="Ilustrasi Buku" />
+        <div class="overlay">Lihat Detail</div>
         <p>Asset kebutuhan PPT bertema Pendidikan</p>
       </div>
-      <div class="gallery-item">
-        <img src="/ilus keluarga.png" alt="Logo 2" />
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="/ilus keluarga.png" alt="Ilustrasi Keluarga" />
+        <div class="overlay">Lihat Detail</div>
         <p>Ilustrasi keluarga kecil yang bahagia</p>
       </div>
-      <div class="gallery-item">
-        <img src="/ilus.png" alt="Logo 3" />
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="/ilus.png" alt="Ilustrasi Wajah" />
+        <div class="overlay">Lihat Detail</div>
         <p>Illustrasi wajah dengan style yang simpel</p>
       </div>
-      <div class="gallery-item">
-        <img src="/Ilusrokok.png" alt="Logo 4" />
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+        <img src="/Ilusrokok.png" alt="Rokok dan Miras" />
+        <div class="overlay">Lihat Detail</div>
         <p>Illustrasi sebuah rokok dan miras</p>
       </div>
-      <div class="gallery-item">
-        <img src="/Poster KDRT.png" alt="Logo 5" />
-        <p>Poster Anti KDRT </p>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+        <img src="/Poster KDRT.png" alt="Poster KDRT" />
+        <div class="overlay">Lihat Detail</div>
+        <p>Poster Anti KDRT</p>
       </div>
-       <div class="gallery-item">
-        <img src="/SIDDAPFEST FINAL.jpg" alt="Logo 6" />
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+        <img src="/SIDDAPFEST FINAL.jpg" alt="SiddapFest" />
+        <div class="overlay">Lihat Detail</div>
         <p>Desain lomba SiddapFest 2024</p>
       </div>
-         <div class="gallery-item">
-        <img src="/poster typogrsp.png" alt="Logo 7" />
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+        <img src="/poster typogrsp.png" alt="Poster Tipografi" />
+        <div class="overlay">Lihat Detail</div>
         <p>Poster Tipografi ilusi mata</p>
       </div>
-      <div class="gallery-item">
-        <div class="gallery-item">
-  <img src="/ilus kolam.png" alt="Logo 8" />
-  <p class="white-caption">Kolam Ikan - Sketsa Digital</p>
-</div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+        <img src="/ilus kolam.png" alt="Ilustrasi Kolam" />
+        <div class="overlay">Lihat Detail</div>
+        <p>Kolam Ikan - Sketsa Digital</p>
+      </div>
+    </div>
+  </div>
 
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
