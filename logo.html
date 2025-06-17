@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logo - Radin Raditya</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff8f0;
     }
+
     .full-orange-box {
       background-color: #d49b20;
       padding: 40px 20px;
@@ -20,30 +20,43 @@
       margin: 20px;
       box-sizing: border-box;
     }
+
     .gallery-title {
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 30px;
     }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery-item {
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .gallery img {
       width: 250px;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
     .gallery p {
       margin-top: 8px;
       font-weight: bold;
     }
+
     .back-button {
       display: inline-block;
       margin: 20px;
@@ -56,6 +69,7 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .back-button:hover {
       background-color: #d49b20;
       color: white;
