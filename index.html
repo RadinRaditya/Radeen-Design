@@ -52,16 +52,42 @@
       flex-direction: row;
       align-items: center;
       gap: 10px;
+      transition: transform 0.3s ease;
     }
 
     .contact-item img {
       width: 40px;
       height: 40px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .contact-item img:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.6));
     }
 
     .contact-item p {
       font-weight: bold;
       margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item p:hover {
+      color: #d49b20;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .contact-item {
+        flex-direction: row;
+        align-items: center;
+      }
     }
 
     .project img {
@@ -132,7 +158,7 @@
       </div>
       <div class="tagline">
         <strong>Graphic Designer</strong><br>
-  <strong>& Illustrator</strong>
+        <strong>& Illustrator</strong>
       </div>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
@@ -151,10 +177,11 @@
     <img src="/1.png" alt="Foto Radin Raditya">
     <div class="intro">
       <h1></h1>
-      <p><span class="big-word">Hallo</span>saya Radin Raditya,seorang desainer grafis dan ilustrator yang berfokus pada menciptakan pengalaman visual yang tak terlupakan. Dengan keterampilan mendalam dalam desain digital, ilustrasi, dan branding, saya berkomitmen untuk menghasilkan karya yang penuh warna, imajinasi, dan kejelasan. Saya siap membantu Anda mewujudkan visi kreatif Anda melalui desain yang inovatif dan bermakna.</p>
+      <p><span class="big-word">Hallo</span> saya Radin Raditya, seorang <strong>desainer grafis</strong> dan <strong>ilustrator</strong> yang berfokus pada menciptakan pengalaman visual yang tak terlupakan. Dengan keterampilan mendalam dalam desain digital, ilustrasi, dan branding, saya berkomitmen untuk menghasilkan karya yang penuh warna, imajinasi, dan kejelasan. Saya siap membantu Anda mewujudkan visi kreatif Anda melalui desain yang inovatif dan bermakna.</p>
       <br>
     </div>
   </section>
+
   <section id="work" class="Project" data-aos="fade-up">
     <h2>Project</h2>
     <div class="project-list">
@@ -176,32 +203,32 @@
     </div>
   </section>
 
- <footer id="contact" data-aos="fade-up">
-  <p><strong>Jika Anda memiliki ide kreatif yang ingin diwujudkan, mari berbicara! Kirim pesan Anda melalui form kontak atau email di bawah ini.</strong></p>
+  <footer id="contact" data-aos="fade-up">
+    <p><strong>Jika Anda memiliki ide kreatif yang ingin diwujudkan, mari berbicara! Kirim pesan Anda melalui form kontak atau email di bawah ini.</strong></p>
 
-  <div class="contact-section">
-    <div class="contact-item">
-      <a href="mailto:raditraditya2019@gmail.com" target="_blank">
-        <img src="/Gmail_icon_(2020).svg.png" alt="Gmail">
-      </a>
-      <p>raditraditya2019@gmail.com</p>
-    </div>
+    <div class="contact-section">
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+        <a href="mailto:raditraditya2019@gmail.com" target="_blank">
+          <img src="/Gmail_icon_(2020).svg.png" alt="Gmail">
+        </a>
+        <p>raditraditya2019@gmail.com</p>
+      </div>
 
-    <div class="contact-item">
-      <a href="https://www.linkedin.com/in/radeentya" target="_blank">
-        <img src="/linkedin-svgrepo-com.svg" alt="LinkedIn">
-      </a>
-      <p>linkedin.com/in/radeentya</p>
-    </div>
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://www.linkedin.com/in/radeentya" target="_blank">
+          <img src="/linkedin-svgrepo-com.svg" alt="LinkedIn">
+        </a>
+        <p>linkedin.com/in/radeentya</p>
+      </div>
 
-    <div class="contact-item">
-      <a href="https://www.behance.net/radityaradin" target="_blank">
-        <img src="/behance-1.svg" alt="Behance">
-      </a>
-      <p>behance.net/radityaradin</p>
+      <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://www.behance.net/radityaradin" target="_blank">
+          <img src="/behance-1.svg" alt="Behance">
+        </a>
+        <p>behance.net/radityaradin</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <div style="background-color: #fff0da; text-align: center; padding: 15px; font-size: 14px; color: #777;">
     © 2025 Radin Raditya. All works are protected under copyright law.
@@ -223,6 +250,7 @@
       } else {
         header.classList.remove('transparent');
       }
+
       const backToTopButton = document.getElementById('backToTop');
       if (document.documentElement.scrollTop > 200) {
         backToTopButton.style.display = "block";
@@ -230,6 +258,7 @@
         backToTopButton.style.display = "none";
       }
     });
+
     document.getElementById('backToTop').addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
